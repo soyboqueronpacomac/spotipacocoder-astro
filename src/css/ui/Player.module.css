@@ -1,0 +1,5 @@
+.player {
+  grid-area: player;
+  background-color: green;
+  color: var(--spotify-text);
+}
