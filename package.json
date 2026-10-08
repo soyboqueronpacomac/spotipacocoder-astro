@@ -1,6 +1,7 @@
 {
   "name": "spotipacocoder-astro",
   "type": "module",
+  "description": "Crear Un clon de Spotify con Astro",
   "version": "0.0.1",
   "engines": {
     "node": ">=22.12.0"
