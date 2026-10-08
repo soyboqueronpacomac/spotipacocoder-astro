@@ -4,15 +4,146 @@
   color: var(--spotify-text);
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1rem;
   justify-content: space-between;
+
   .menuLeft {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    a {
+      color: var(--spotify-text);
+
+      text-decoration: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: var(--spotify-card-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    form {
+      width: 400px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+
+      div {
+        width: 100%;
+        padding: .5rem .125rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--spotify-card-hover);
+        border-radius: 9999px;
+
+        svg {
+          width: 2.75rem;
+          height: 2.75rem;
+        }
+
+        input[type="text"] {
+          width: 100%;
+          border: none;
+          outline: none;
+          background: transparent;
+          color: var(--spotify-text);
+          border-right: 1px solid var(--spotify-text);
+        }
+
+        input[type="text"]::placeholder {
+          color: var(--spotify-text);
+          opacity: 0.7;
+        }
+
+        button {
+          border: none;
+          background-color: var(--spotify-card-hover);
+          color: var(--spotify-text);
+          padding: 0.5rem 1rem;
+          border-radius: 9999px;
+          cursor: pointer;
+
+        }
+      }
+    }
   }
+
   .menuRight {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
+
+    button {
+      border: none;
+      background-color: var(--spotify-text);
+      color: var(--spotify-card);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    a {
+      color: var(--spotify-text);
+      text-decoration: none;
+    }
+
+    .installApp {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+        background-color: transparent;
+      }
+    }
+
+    .auth {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 9999px;
+      background-color: var(--spotify-card-hover);
+
+      .number {
+        padding: 1rem;
+        color: var(--spotify-text);
+        font-weight: bold;
+        background-color: var(--spotify-card-hover);
+        border: 1px solid var(--spotify-card);
+        width: 1rem;
+        height: 1rem;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .perfil {
+      padding: 1rem;
+      color: var(--spotify-base);
+      font-weight: bold;
+      background-color: palevioletred;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
