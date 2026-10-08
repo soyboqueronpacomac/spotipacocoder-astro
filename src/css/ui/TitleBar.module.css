@@ -1,0 +1,18 @@
+.titleBar {
+  grid-area: titleTop;
+  background-color: var(--spotify-card);
+  color: var(--spotify-text);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+  .menuLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .menuRight {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,20 @@
+---
+import styles from '@css/ui/TitleBar.module.css'
+import SearchIcon from '@/icons/search.svg'
+import HomeIcon from '@/icons/home.svg'
+import BinocularsIcon from '@/icons/binoculars.svg'
+---
+<header class={styles.titleBar}>
+  <nav class={styles.menuLeft}>
+    <div>logo</div>
+    <a href=""><HomeIcon width="24" height="24" fill="currentColor" /></a>
+    <form action="">
+      <div>
+        <SearchIcon width="24" height="24" fill="currentColor" />
+        <input type="text" placeholder="¿Qué quieres reproducir?" />
+        <button type="submit"><BinocularsIcon width="24" height="24" fill="currentColor" /></button>
+      </div>
+    </form>
+  </nav>
+  <nav class={styles.menuRight}>Menu Right</nav>
+</header>
