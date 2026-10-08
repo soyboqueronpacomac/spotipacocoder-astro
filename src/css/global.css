@@ -1,0 +1,35 @@
+:root {
+  /* Colores Principales */
+  --spotify-green: #1db954;
+  --spotify-green-hover: #1ed760;
+  --spotify-black: #191414;
+
+  /* Colores de Fondo y Contenedores */
+  --spotify-base: #121212;
+  /* Fondo de la aplicación */
+  --spotify-card: #181818;
+  /* Fondo de las tarjetas de álbunes/playlists */
+  --spotify-card-hover: #282828;
+  /* Fondo de las tarjetas de álbunes/playlists al pasar el cursor */
+
+  /* Texto y Elementos */
+  --spotify-text: #ffffff;
+  /* Color del texto principal */
+  --spotify-text-secondary: #b3b3b3;
+  /* Color del texto secundario */
+}
+
+body {
+  background-color: var(--spotify-base);
+  color: var(--spotify-text);
+  font-family: system-ui, sans-serif;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 4rem 1fr 4rem;
+  grid-template-areas: "titleTop titleTop"
+                       "sidebar content"
+                       "player player";
+  height: 100vh;
+  margin: 0;
+  
+}

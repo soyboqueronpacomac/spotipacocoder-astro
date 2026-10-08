@@ -1,0 +1,13 @@
+.sidebar {
+  grid-area: sidebar;
+  background-color: blue;
+  color: var(--spotify-text);
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  .top {
+    background-color: lightblue;
+  }
+  .content {
+    background-color: lightgray;
+  }
+}
