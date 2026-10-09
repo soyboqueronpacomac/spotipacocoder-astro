@@ -1,0 +1,10 @@
+---
+import styles from '@css/components/sidebar/tags/SidebarTag.module.css'
+import type { Tag } from './tags.data';
+interface Props {
+  tag: Tag;
+}
+const { tag } = Astro.props;
+---
+
+<div class={styles.sidebarTag}>{tag.name}</div>
