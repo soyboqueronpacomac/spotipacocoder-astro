@@ -74,8 +74,12 @@ body {
   grid-template-areas: "titleTop titleTop titleTop"
     "sidebar content content"
     "player player player";
+  transition: grid-template-columns 0.2s ease;
   height: 100vh;
   margin: 0;
   padding: var(--size);
 
+}
+body[data-sidebar="collapsed"] {
+  --template-columns: 80px 1fr 1fr;
 }

@@ -1,0 +1,18 @@
+---
+import styles from '@css/components/sidebar/card/SidebarCard.module.css'
+import type { Playlist } from '@libs/data'
+interface Props {
+  playlist: Playlist
+}
+const { playlist } = Astro.props
+---
+
+<a href="#" class={styles.sidebarCard}>
+  <picture>
+    <img src={playlist.cover} alt={playlist.title}>
+  </picture>
+  <div>
+    <h4>{playlist.title}</h4>
+    <span>{playlist.artists.join(', ')}</span>
+  </div>
+</a>

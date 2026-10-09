@@ -1,0 +1,14 @@
+---
+import SidebarCard from '@/components/sidebar/card/SidebarCard.astro'
+import {playlists} from '@libs/data'
+---
+
+<nav>
+
+  {playlists.map((playlist) => (
+  
+      <SidebarCard playlist={playlist} />
+    
+  ))}
+  
+</nav>

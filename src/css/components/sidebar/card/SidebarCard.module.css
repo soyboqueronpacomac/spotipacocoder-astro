@@ -1,0 +1,53 @@
+.sidebarCard {
+  display: flex;
+  align-items: center;
+  gap: var(--size);
+  padding: var(--size);
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    background-color: var(--spotify-card-hover);
+  }
+
+  picture {
+    flex-shrink: 0;
+    width: calc(var(--size) * 6);
+    height: calc(var(--size) * 6);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: calc(var(--size) / 2);
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    h4 {
+      margin: 0;
+      font-size: .875rem;
+      font-weight: bold;
+      
+    }
+
+    span {
+      margin: 0;
+      font-size: .75rem;
+      color: var(--spotify-text-secondary);
+    }
+  }
+}
+
+:global(body[data-sidebar="collapsed"]) .sidebarCard div {
+  display: none;
+}
