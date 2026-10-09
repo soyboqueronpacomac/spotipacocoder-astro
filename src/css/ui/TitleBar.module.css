@@ -1,6 +1,6 @@
 .titleBar {
   grid-area: titleTop;
-  background-color: var(--spotify-card);
+  background-color: inherit;
   color: var(--spotify-text);
   display: flex;
   align-items: center;
