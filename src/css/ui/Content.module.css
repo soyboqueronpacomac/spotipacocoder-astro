@@ -6,9 +6,9 @@
   gap: var(--size);
   grid-template-columns: 2fr 1fr;
   section {
-    background-color: var(--spotify-card-hover);
+    background-color: var(--spotify-card);
   }
   aside {
-    background-color: var(--spotify-card-hover);
+    background-color: var(--spotify-card);
   }
 }

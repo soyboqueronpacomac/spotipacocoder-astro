@@ -1,0 +1,10 @@
+---
+import styles from '@css/components/sidebar/tags/SidebarTags.module.css'
+import {tags} from './tags.data';
+import SidebarTag from './SidebarTag.astro';
+---
+<section class={styles.sidebarTags}>
+  {tags.map(tag => (
+    <SidebarTag tag={tag} />
+  ))}
+</section>
