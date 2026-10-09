@@ -4,41 +4,53 @@
   color: var(--spotify-text);
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: .5rem;
   justify-content: space-between;
+  box-sizing: border-box;
+  min-width: 0;
+  gap: 1rem;
+  --control-size: 3rem;
 
   .menuLeft {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex: 1 1 auto;
+    min-width: 0;
 
     a {
       color: var(--spotify-text);
 
       text-decoration: none;
-      width: 1.5rem;
-      height: 1.5rem;
+      
       border-radius: 50%;
       background-color: var(--spotify-card-hover);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      box-sizing: border-box;
+      width: var(--control-size);
+      height: var(--control-size);
+      flex-shrink: 0;
 
       svg {
-        width: 3rem;
-        height: 3rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
 
     form {
-      width: 400px;
+      width: 100%;
+      max-width: 400px;
+      min-width: 0;
       display: grid;
       grid-template-columns: 1fr auto;
 
       div {
         width: 100%;
-        padding: .5rem .125rem;
+        height: var(--control-size);
+        box-sizing: border-box;
+        padding: 0 .5rem 0 .75rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -46,12 +58,14 @@
         border-radius: 9999px;
 
         svg {
-          width: 2.75rem;
-          height: 2.75rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          flex-shrink: 0;
         }
 
         input[type="text"] {
           width: 100%;
+          min-width: 0;
           border: none;
           outline: none;
           background: transparent;
@@ -68,10 +82,11 @@
           border: none;
           background-color: var(--spotify-card-hover);
           color: var(--spotify-text);
-          padding: 0.5rem 1rem;
+          padding: 0.25rem 0.75rem;
           border-radius: 9999px;
           cursor: pointer;
-
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -81,6 +96,8 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-shrink: 0;
+    white-space: nowrap;
 
     button {
       border: none;
@@ -113,19 +130,22 @@
     .auth {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem;
+      gap: 0.25rem;
+      height: var(--control-size);
+      box-sizing: border-box;
+      padding: 0.25rem;
       border-radius: 9999px;
       background-color: var(--spotify-card-hover);
 
       .number {
-        padding: 1rem;
+        box-sizing: border-box;
+        padding: 0;
         color: var(--spotify-text);
         font-weight: bold;
         background-color: var(--spotify-card-hover);
         border: 1px solid var(--spotify-card);
-        width: 1rem;
-        height: 1rem;
+        width: calc(var(--control-size) - 0.5rem);
+        height: calc(var(--control-size) - 0.5rem);
         border-radius: 9999px;
         display: flex;
         align-items: center;
@@ -134,12 +154,13 @@
     }
 
     .perfil {
-      padding: 1rem;
+      box-sizing: border-box;
+      padding: 0;
       color: var(--spotify-base);
       font-weight: bold;
       background-color: palevioletred;
-      width: 1rem;
-      height: 1rem;
+      width: calc(var(--control-size) - 0.5rem);
+      height: calc(var(--control-size) - 0.5rem);
       border-radius: 9999px;
       display: flex;
       align-items: center;
