@@ -19,6 +19,7 @@
       transition: opacity 0.2s ease;
     }
     h3 {
+      font-size: 1rem;
       transform: translateX(var(--title-shift, 0px));
       transition: transform 0.2s ease;
     }
