@@ -2,5 +2,16 @@
   grid-area: sidebar;
   background-color: var(--spotify-card);
   color: var(--spotify-text);
- 
+  padding: var(--size);
+  display: grid;
+  gap: var(--size);
+  grid-template-rows: 3rem 3rem 1fr;
+  --collapse-icon-opacity: 0;
+  --title-shift: calc(-1.5rem - var(--size));
+
+  &:hover {
+    --collapse-icon-opacity: 1;
+    --title-shift: 0px;
+  }
+
 }

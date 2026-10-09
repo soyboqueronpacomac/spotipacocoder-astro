@@ -1,0 +1,34 @@
+.sidebarHeader {
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  nav{
+    display: flex;
+    gap: var(--size);
+    align-items: center;
+    svg {
+      display: block;
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--spotify-text);
+    }
+    &:first-child svg {
+      opacity: var(--collapse-icon-opacity, 1);
+      transition: opacity 0.2s ease;
+    }
+    h3 {
+      transform: translateX(var(--title-shift, 0px));
+      transition: transform 0.2s ease;
+    }
+    span {
+      padding: .25rem;
+      border-radius: 50%;
+      background-color: var(--spotify-card-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
