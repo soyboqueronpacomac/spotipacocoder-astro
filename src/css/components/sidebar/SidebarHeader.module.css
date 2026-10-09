@@ -14,6 +14,12 @@
       height: 1.5rem;
       color: var(--spotify-text);
     }
+    button {
+      all: unset;
+      display: flex;
+      cursor: pointer;
+      color: var(--spotify-text);
+    }
     &:first-child svg {
       opacity: var(--collapse-icon-opacity, 1);
       transition: opacity 0.2s ease;
@@ -31,5 +37,16 @@
       align-items: center;
       justify-content: center;
     }
+  }
+}
+
+:global(body[data-sidebar="collapsed"]) .sidebarHeader {
+  justify-content: center;
+  nav:first-child svg {
+    opacity: 1;
+  }
+  nav:first-child h3,
+  nav:last-child {
+    display: none;
   }
 }

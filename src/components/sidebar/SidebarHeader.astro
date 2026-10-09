@@ -7,7 +7,9 @@ import ArrowDiagonalIcon from '@/icons/arrow-diagonal.svg';
 
 <header class={styles.sidebarHeader}>
   <nav>
-    <LayoutSidebarLeftCollapseIcon />
+    <button type="button" id="sidebar-toggle" aria-label="Contraer biblioteca" aria-expanded="true">
+      <LayoutSidebarLeftCollapseIcon />
+    </button>
     <h3>Tu biblioteca</h3>
   
   </nav>
@@ -16,3 +18,13 @@ import ArrowDiagonalIcon from '@/icons/arrow-diagonal.svg';
     <ArrowDiagonalIcon />
   </nav>
 </header>
+
+<script>
+  const toggle = document.querySelector('#sidebar-toggle')
+  toggle?.addEventListener('click', () => {
+    const collapsed = document.body.dataset.sidebar === 'collapsed'
+    document.body.dataset.sidebar = collapsed ? 'expanded' : 'collapsed'
+    toggle.setAttribute('aria-expanded', String(collapsed))
+    toggle.setAttribute('aria-label', collapsed ? 'Contraer biblioteca' : 'Expandir biblioteca')
+  })
+</script>

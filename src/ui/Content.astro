@@ -4,6 +4,6 @@ import ContentMain from '@/components/content/ContentMain.astro'
 import ContentLike from '@/components/content/ContentLike.astro'
 ---
 <main class={styles.content}>
-  <ContentMain />
+  <ContentMain><slot /></ContentMain>
   <ContentLike />
 </main>

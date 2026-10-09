@@ -2,9 +2,13 @@
 import styles from '@css/ui/Sidebar.module.css'
 import SidebarHeader from '@/components/sidebar/SidebarHeader.astro'
 import SidebarTags from '@/components/sidebar/tags/SidebarTags.astro'
+import SidebarSearch from '@/components/sidebar/search/SidebarSearch.astro'
+import SidebarList from '@/components/sidebar/list/SidebarList.astro'
 ---
 
 <aside class={styles.sidebar}>
   <SidebarHeader />
   <SidebarTags />
+  <SidebarSearch />
+  <SidebarList /> 
 </aside>
