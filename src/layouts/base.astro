@@ -1,5 +1,5 @@
 ---
-import Content from "@/ui/Content   .astro";
+import Content from "@/ui/Content.astro";
 import Player from "@/ui/Player.astro";
 import Sidebar from "@/ui/Sidebar.astro";
 import Titlebar from "@/ui/Titlebar.astro";
@@ -22,7 +22,7 @@ const { title } = Astro.props as Props;
   <body>
     <Titlebar />
     <Sidebar />
-    <Content />
+    <Content><slot /></Content>
     <Player />
   </body>
 </html>

@@ -1,0 +1,24 @@
+.sidebar-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  svg {
+    width: calc(var(--size) * 3);
+    height: calc(var(--size) * 3);
+    fill: currentColor;
+    color: var(--spotify-text-secondary);
+    &:hover {
+      color: var(--spotify-text);
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--size) * 1);
+    color: var(--spotify-text-secondary);
+  }
+}
+
+:global(body[data-sidebar="collapsed"]) .sidebar-search {
+  display: none;
+}
